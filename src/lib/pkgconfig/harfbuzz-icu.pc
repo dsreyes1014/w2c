@@ -1,0 +1,13 @@
+prefix=/home/drewshei/w2c/deps-pkgs/../src
+exec_prefix=/home/drewshei/w2c/deps-pkgs/../src
+libdir=/home/drewshei/w2c/deps-pkgs/../src/lib
+includedir=/home/drewshei/w2c/deps-pkgs/../src/include
+
+Name: harfbuzz
+Description: HarfBuzz text shaping library ICU integration
+Version: 0.9.25
+
+Requires: harfbuzz
+Requires.private: icu-uc
+Libs: -L${libdir} -lharfbuzz-icu
+Cflags: -I${includedir}/harfbuzz

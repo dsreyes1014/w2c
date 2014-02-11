@@ -1,0 +1,19 @@
+# Pango Modules file
+# Automatically generated file, do not edit
+#
+# ModulesPath = /home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules
+#
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-basic-fc.so BasicScriptEngineFc PangoEngineShape PangoRenderFc common:
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-thai-lang.so ThaiScriptEngineLang PangoEngineLang PangoRenderNone thai:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so devaIndicScriptEngineLang PangoEngineLang PangoRenderNone devanagari:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so bengIndicScriptEngineLang PangoEngineLang PangoRenderNone bengali:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so guruIndicScriptEngineLang PangoEngineLang PangoRenderNone gurmukhi:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so gujrIndicScriptEngineLang PangoEngineLang PangoRenderNone gujarati:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so oryaIndicScriptEngineLang PangoEngineLang PangoRenderNone oriya:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so tamlIndicScriptEngineLang PangoEngineLang PangoRenderNone tamil:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so teluIndicScriptEngineLang PangoEngineLang PangoRenderNone telugu:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so kndaIndicScriptEngineLang PangoEngineLang PangoRenderNone kannada:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so mlymIndicScriptEngineLang PangoEngineLang PangoRenderNone malayalam:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-indic-lang.so sinhIndicScriptEngineLang PangoEngineLang PangoRenderNone sinhala:*
+/home/drewshei/w2c/deps-pkgs/../src/lib/pango/1.8.0/modules/pango-arabic-lang.so ArabicScriptEngineLang PangoEngineLang PangoRenderNone arabic:*
+

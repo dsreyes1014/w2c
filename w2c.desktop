@@ -1,0 +1,8 @@
+[Desktop Entry]
+Type=Application
+Encoding=UTF-8
+Name=Write2chordpro
+Comment=A tool to help write chordpro formatted songs
+Icon=/usr/share/w2c/icons/menu-editor.svg
+Exec=w2c-gui
+Terminal=false
