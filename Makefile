@@ -26,7 +26,7 @@ LIBS = -lgtk-3 -lgdk-3 -lgobject-2.0 -latk-1.0 -lgio-2.0 -lglib-2.0 -lpangoft2-1
        -lgdk_pixbuf-2.0 -lpangocairo-1.0 -lcairo -lpango-1.0 -lfreetype -lfontconfig \
        -lgmodule-2.0 -lgthread-2.0 
        
-PROGRAM = src/w2c-gui
+PROGRAM = w2c-gui
 OBJECTS = src/main.o src/menu.o src/chords.o src/songs.o src/editor.o src/display.o src/transpose.o
 HEADERS = src/menu.h src/chords.h src/songs.h src/editor.h src/display.h src/transpose.h
 GTK+3 = `pkg-config --cflags gtk+-3.0 --libs gtk+-3.0`
@@ -39,22 +39,22 @@ all: $(PROGRAM)
 $(PROGRAM): $(OBJECTS)
 	$(CC) $(OBJECTS) $(LDFLAGS) $(LIBS) -o $(PROGRAM)
 main.o: src/main.c $(HEADERS)
-	$(CC) $(CFLAGS) $(CPPFLAGS) src/main.c 
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LIBS) src/main.c 
 display.o: src/display.c src/editor.h 
-	$(CC) $(CFLAGS) $(CPPFLAGS) src/display.c 
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LIBS) src/display.c 
 menu.o: src/menu.c
-	$(CC) $(CFLAGS) $(CPPFLAGS) src/menu.c 
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LIBS) src/menu.c 
 chords.o: src/chords.c src/editor.h
-	$(CC) $(CFLAGS) $(CPPFLAGS) src/chords.c 
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LIBS) src/chords.c 
 songs.o: src/songs.c src/editor.h src/display.h
-	$(CC) $(CFLAGS) $(CPPFLAGS) src/songs.c 
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LIBS) src/songs.c 
 editor.o: src/editor.c src/chords.h src/transpose.h src/songs.h src/display.h
-	$(CC) $(CFLAGS) $(CPPFLAGS) src/editor.c 
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LIBS) src/editor.c 
 transpose.o: src/transpose.c src/editor.h
-	$(CC) $(CFLAGS) $(CPPFLAGS) src/transpose.c 
+	$(CC) $(CFLAGS) $(CPPFLAGS) $(LIBS) src/transpose.c 
 
 clean: 
-	rm -rfv $(OBJECTS) src/w2c-gui src/*~
+	rm -rfv $(OBJECTS) $(PROGRAM) src/*~
 
 install: $(PROG_DIR)
 	cp -Rv src/bin $(PROG_DIR)/
