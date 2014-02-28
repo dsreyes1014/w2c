@@ -22,7 +22,7 @@ CPPFLAGS = -I$(INCLUDE)/atk-1.0 -I$(INCLUDE)/cairo -I$(INCLUDE)/gtk-3.0 \
 LDFLAGS = -L$(LIBDIR)
 
 # Libraries to link
-LIBS = $(LIBDIR)/libgtk-3.la -lgdk-3 -lgobject-2.0 -latk-1.0 -lgio-2.0 -lglib-2.0 -lpangoft2-1.0 \
+LIBS = $(LIBDIR)/libgtk-3.so -lgdk-3 -lgobject-2.0 -latk-1.0 -lgio-2.0 -lglib-2.0 -lpangoft2-1.0 \
        -lgdk_pixbuf-2.0 -lpangocairo-1.0 -lcairo -lpango-1.0 -lfreetype -lfontconfig \
        -lgmodule-2.0 -lgthread-2.0 
        
