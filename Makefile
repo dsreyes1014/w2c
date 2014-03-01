@@ -66,7 +66,8 @@ install: $(PROG_DIR)
 	cp -v $(DESKTOP_FILE) /usr/share/applications/
 	cp -Rv icons /usr/share/w2c/icons
 	echo "/opt/Write2chordpro/lib" > w2c.conf
-	echo "export PATH=/opt/Write2chordpro/bin:$PATH" > w2c.sh
+	echo "/usr/lib" >> w2c.conf
+	echo "export PATH='/opt/Write2chordpro/bin:$(PATH)'" > w2c.sh
 	mv -v w2c.conf /etc/ld.so.conf.d/
 	mv -v w2c.sh /etc/profile.d/
 	ldconfig
