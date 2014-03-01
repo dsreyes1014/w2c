@@ -65,6 +65,11 @@ install: $(PROG_DIR)
 	cp -v $(INSTALL_DIR)/w2c-gui /usr/local/bin/
 	cp -v $(DESKTOP_FILE) /usr/share/applications/
 	cp -Rv icons /usr/share/w2c/icons
+	echo "/opt/Write2chordpro/lib" > w2c.conf
+	echo "export PATH=/opt/Write2chordpro/bin:$PATH" > w2c.sh
+	mv -v w2c.conf /etc/ld.so.conf.d/
+	mv -v w2c.sh /etc/profile.d/
+	ldconfig
 
 $(PROG_DIR): 
 	src/progDir # program directory script to make sure directory exists before install.
