@@ -456,8 +456,6 @@ void insert_chord(GtkWidget *widget, gpointer data)
 		gtk_text_buffer_place_cursor(GTK_TEXT_BUFFER(t_buffer_editor), &iter);		
 	}
 
-	//gtk_tree_view_set_activate_on_single_click(GTK_TREE_VIEW(tree_view), TRUE);
-
 	// Sets properties of frame & dialog widgets.	
 	gtk_frame_set_shadow_type(GTK_FRAME(frame), GTK_SHADOW_ETCHED_IN);
 		
@@ -478,7 +476,7 @@ void insert_chord(GtkWidget *widget, gpointer data)
 	
 	gtk_tree_view_set_hover_expand(GTK_TREE_VIEW(tree_view), TRUE);
 	
-	//gtk_tree_view_set_activate_on_single_click(GTK_TREE_VIEW(tree_view), TRUE);
+	gtk_tree_view_set_activate_on_single_click(GTK_TREE_VIEW(tree_view), TRUE);
 		
 	// Sets properties for chord_dialog widget.	
 	gtk_window_set_modal(GTK_WINDOW(chord_dialog), TRUE);
