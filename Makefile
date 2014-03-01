@@ -37,7 +37,7 @@ UNINSTALL = src/uninstallW2C
 
 all: $(PROGRAM)
 $(PROGRAM): $(OBJECTS)
-	$(CC) $(OBJECTS) $(LDFLAGS) -o $(PROGRAM) $(LIBS)
+	$(CC) $(OBJECTS) $(LDFLAGS) $(LIBS) -o $(PROGRAM) 
 main.o: src/main.c $(HEADERS)
 	$(CC) $(CFLAGS) $(CPPFLAGS) src/main.c 
 display.o: src/display.c src/editor.h 
