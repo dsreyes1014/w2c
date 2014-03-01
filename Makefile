@@ -60,6 +60,7 @@ install: $(PROG_DIR)
 	cp -Rv src/bin $(PROG_DIR)/
 	cp -Rv src/lib $(PROG_DIR)/
 	cp -Rv src/etc $(PROG_DIR)/
+	cp -Rv src/include $(PROG_DIR)/
 	cp -v $(PROGRAM) $(INSTALL_DIR)/
 	cp -v $(UNINSTALL) /opt/
 	cp -v $(INSTALL_DIR)/w2c-gui /usr/local/bin/
