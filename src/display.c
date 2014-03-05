@@ -213,7 +213,7 @@ void display(GtkTextBuffer *buffer, GtkWidget *t_view)
 								  "Bridge 2:", "Bridge 3:", "Intro:",
 								  "End:", "PreChorus:", "Verso:",
 								  "Chorus:", "Coro:", "Puente:", 
-								  "Key Shift:"};
+								  "Key Shift:", "Instrumental:"};
 								  
 //-----------------------------------------------------------------------------				
 	gtk_text_buffer_get_start_iter(buffer, &start);
@@ -398,7 +398,7 @@ void display(GtkTextBuffer *buffer, GtkWidget *t_view)
 	char_line = 0;
 	char_line_offset = 0;
 	
-	for(i = 0; i < 16;)
+	for(i = 0; i < 17;)
 	{
 		for(j = 0; j == 0;)
 		{
