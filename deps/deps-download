@@ -43,8 +43,9 @@
 #else
 #    curl -O http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.39/gobject-introspection-1.39.90.tar.xz
 #fi
-if [ -e gtk+-3.10.7.tar.xz ]; 
-    then echo "'gtk+-3.10.7.tar.xz'.....already exists"
+if [ -e gtk+-3.10.7.tar.xz ] 
+then 
+	echo "'gtk+-3.10.7.tar.xz'.....already exists"
 else
     curl -O -L http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.7.tar.xz
 fi

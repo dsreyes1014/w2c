@@ -36,7 +36,8 @@ DIR=/opt/Write2chordpro
 #fi
 
 # Build GTK-3.10.7
-if [ -e $DIR/lib/libgtk.so ]; then
+if [ -e $DIR/lib/libgtk.so ]
+then
     echo "'gtk+-3.10.7'..........already installed"
 else
     tar -Jxf gtk+-3.10.7.tar.xz
@@ -49,8 +50,7 @@ else
     make
     sudo make install
     cd ..
-    rm -rf gtk+-3.10.7
-    sudo cp -Rv ../../themes/Zukwito $DIR/share/themes/
+    rm -rf gtk+-3.10.7*
 fi
 
 

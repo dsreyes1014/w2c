@@ -1,4 +1,6 @@
-# This the compiler.
+SHELL = /bin/bash
+
+# This is the compiler.
 CC = gcc
 
 # This is the directory in which the program will be installed
@@ -32,12 +34,22 @@ HEADERS = src/menu.h src/chords.h src/songs.h src/editor.h src/display.h src/tra
 #GTK+3 = `pkg-config --cflags gtk+-3.0 --libs gtk+-3.0`
 DESKTOP_FILE = w2c.desktop
 # Uninstall script will be located in /opt when installed.
-UNINSTALL = src/uninstall-w2c
+UNINSTALL = src/uninstall-w2c.sh
 
-
-all: $(PROGRAM)
+all: checkdir $(PROGRAM)
+checkdir:
+	if [ -e $(PROG_DIR) ]; \
+	then \
+		echo "Checking for directory..."; \
+		echo "Directory exists. Continuing build."; \
+	else \
+		echo "Building dependencies..."; \
+		cd deps; \
+		./deps-download; \
+		./install-deps; \
+	fi
 $(PROGRAM): $(OBJECTS)
-	$(CC) $(OBJECTS) $(LDFLAGS)  $(LIBS) -o $(PROGRAM) 
+	$(CC) $(OBJECTS) $(LDFLAGS) $(LIBS) -o $(PROGRAM) 
 main.o: src/main.c $(HEADERS)
 	$(CC) $(CFLAGS) $(CPPFLAGS) src/main.c 
 display.o: src/display.c src/editor.h 
@@ -54,27 +66,20 @@ transpose.o: src/transpose.c src/editor.h
 	$(CC) $(CFLAGS) $(CPPFLAGS) src/transpose.c 
 
 clean: 
-	rm -rfv $(OBJECTS) $(PROGRAM) src/*~
+	rm -rfv $(OBJECTS) $(PROGRAM) src/*~ *~
 
 install: $(PROG_DIR)
-	cp -Rv src/bin $(PROG_DIR)/
-	cp -Rv src/lib $(PROG_DIR)/
-	cp -Rv src/etc $(PROG_DIR)/
-	cp -Rv src/include $(PROG_DIR)/
 	cp -v $(PROGRAM) $(INSTALL_DIR)/
 	cp -v $(UNINSTALL) /opt/
-	cp -v $(INSTALL_DIR)/w2c-gui /usr/local/bin/
 	cp -v $(DESKTOP_FILE) /usr/share/applications/
+	cp -Rv themes/Zukitwo $(PROG_DIR)/share/themes/
+	mkdir -v /usr/share/w2c
 	cp -Rv icons /usr/share/w2c/icons
-	echo "/opt/Write2chordpro/lib" > w2c.conf
-	echo "/usr/lib" >> w2c.conf
-	echo "export PATH='/opt/Write2chordpro/bin:$(PATH)'" > w2c.sh
-	mv -v w2c.conf /etc/ld.so.conf.d/
+	echo "export PATH=/opt/Write2chordpro/bin:${PATH}" > w2c.sh
 	mv -v w2c.sh /etc/profile.d/
-	ldconfig
 
 $(PROG_DIR): 
-	src/progDir # program directory script to make sure directory exists before install.
+	src/prog-dir.sh # program directory script to make sure directory exists before install.
 	
 uninstall: check
 	/opt/$(UNINSTALL)
