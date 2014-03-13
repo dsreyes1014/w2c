@@ -1,0 +1,135 @@
+#!/bin/bash
+
+#########################
+# Fetching dependencies #
+#########################
+if [ -e atk-2.11.90.tar.xz ]; 
+    then echo "'atk-2.11.90.tar.xz'.....already exists"
+else
+    curl -O http://ftp.gnome.org/pub/gnome/sources/atk/2.11/atk-2.11.90.tar.xz
+fi
+if [ -e cairo-1.12.16.tar.xz ]; 
+    then echo "'cairo-1.12.16.tar.xz'.....already exists"
+else
+    curl -O http://cairographics.org/releases/cairo-1.12.16.tar.xz
+fi
+if [ -e expat-2.1.0.tar.gz ]; 
+    then echo "'expat-2.1.0.tar.gz'.....already exists"
+else
+    curl -O -L http://downloads.sourceforge.net/expat/expat-2.1.0.tar.gz
+fi
+if [ -e fontconfig-2.11.0.tar.bz2 ]; 
+    then echo "'fontconfig-2.11.0.tar.bz2'.....already exists"
+else
+    curl -O http://www.freedesktop.org/software/fontconfig/release/fontconfig-2.11.0.tar.bz2
+fi
+if [ -e freetype-2.5.3.tar.bz2 ]; 
+    then echo "'freetype-2.5.3.tar.bz2'.....already exists"
+else
+    curl -O https://sourceforge.net/projects/freetype/files/freetype2/2.5.3/freetype-2.5.3.tar.bz2/download/freetype-2.5.3.tar.bz2
+fi
+if [ -e gdk-pixbuf-2.30.6.tar.xz ]; 
+    then echo "'gdk-pixbuf-2.30.6.tar.xz'.....already exists"
+else
+    curl -O http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.30/gdk-pixbuf-2.30.6.tar.xz
+fi
+if [ -e glib-2.39.91.tar.xz ]; 
+    then echo "'glib-2.39.91.tar.xz'.....already exists"
+else
+    curl -O http://ftp.gnome.org/pub/gnome/sources/glib/2.39/glib-2.39.91.tar.xz
+fi
+if [ -e gobject-introspection-1.39.90.tar.xz ]; 
+    then echo "'gobject-introspection-1.39.90.tar.xz'.....already exists"
+else
+    curl -O http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.39/gobject-introspection-1.39.90.tar.xz
+fi
+if [ -e gtk+-3.10.7.tar.xz ]; 
+    then echo "'gtk+-3.10.7.tar.xz'.....already exists"
+else
+    curl -O -L http://ftp.gnome.org/pub/gnome/sources/gtk+/3.10/gtk+-3.10.7.tar.xz
+fi
+if [ -e harfbuzz-0.9.26.tar.bz2 ]; 
+    then echo "'harfbuzz-0.9.26.tar.bz2'.....already exists"
+else
+    curl -O http://www.freedesktop.org/software/harfbuzz/release/harfbuzz-0.9.26.tar.bz2
+fi
+if [ -e icu4c-52_1-src.tgz ]; 
+    then echo "'icu4c-52_1-src.tgz'.....already exists"
+else
+    curl -O http://download.icu-project.org/files/icu4c/52.1/icu4c-52_1-src.tgz
+fi
+if [ -e intltool-0.50.2.tar.gz ]; 
+    then echo "'intltool-0.50.2.tar.gz'.....already exists"
+else
+    curl -O launchpad.net/intltool/trunk/0.50.2/+download/intltool-0.50.2.tar.gz/intltool-0.50.2.tar.gz
+fi
+if [ -e libffi-3.0.13-includedir-1.patch ]; 
+    then echo "'libffi-3.0.13-includedir-1.patch'.....already exists"
+else
+    curl -O http://www.linuxfromscratch.org/patches/blfs/svn/libffi-3.0.13-includedir-1.patch
+fi
+if [ -e libffi-3.0.13.tar.gz ]; 
+    then echo "'libffi-3.0.13.tar.gz'.....already exists"
+else
+    curl -O ftp://sourceware.org/pub/libffi/libffi-3.0.13.tar.gz
+fi
+if [ -e libjpeg-turbo-1.3.0.tar.gz ]; 
+    then echo "'libjpeg-turbo-1.3.0.tar.gz'.....already exists"
+else
+    curl -O http://sourceforge.net/projects/libjpeg-turbo/files/1.3.0/libjpeg-turbo-1.3.0.tar.gz/download/libjpeg-turbo-1.3.0.tar.gz
+fi
+if [ -e libpng-1.6.9.tar.xz ]; 
+    then echo "'libpng-1.6.9.tar.xz'.....already exists"
+else
+    curl -O https://sourceforge.net/projects/libpng/files/libpng16/1.6.9/libpng-1.6.9.tar.xz/download/libpng-1.6.9.tar.xz
+fi
+if [ -e libxml2-2.9.1.tar.gz ]; 
+    then echo "'libxml2-2.9.1.tar.gz'.....already exists"
+else
+    curl -O http://xmlsoft.org/sources/libxml2-2.9.1.tar.gz
+fi
+if [ -e nasm-2.11.02.tar.xz ]; 
+    then echo "'nasm-2.11.02.tar.xz'.....already exists"
+else
+    curl -O http://www.nasm.us/pub/nasm/releasebuilds/2.11.02/nasm-2.11.02.tar.xz
+fi
+if [ -e pango-1.36.2.tar.xz ]; 
+    then echo "'pango-1.36.2.tar.xz'.....already exists"
+else
+    curl -O http://ftp.gnome.org/pub/gnome/sources/pango/1.36/pango-1.36.2.tar.xz
+fi
+if [ -e pcre-8.34.tar.bz2 ]; 
+    then echo "'pcre-8.34.tar.bz2'.....already exists"
+else
+    curl -O https://sourceforge.net/projects/pcre/files/pcre/8.34/pcre-8.34.tar.bz2/download/pcre-8.34.tar.bz2
+fi
+if [ -e pixman-0.32.4.tar.gz ]; 
+    then echo "'pixman-0.32.4.tar.gz'.....already exists"
+else
+    curl -O http://cairographics.org/releases/pixman-0.32.4.tar.gz
+fi
+if [ -e Python-2.7.6.tar.xz ]; 
+    then echo "'Python-2.7.6.tar.xz'.....already exists"
+else
+    curl -O -L http://www.python.org/ftp/python/2.7.6/Python-2.7.6.tar.xz
+fi
+if [ -e shared-mime-info-1.2.tar.xz ]; 
+    then echo "'shared-mime-info-1.2.tar.xz'.....already exists"
+else
+    curl -O http://freedesktop.org/~hadess/shared-mime-info-1.2.tar.xz
+fi
+if [ -e tiff-4.0.3.tar.gz ]; 
+    then echo "'tiff-4.0.3.tar.gz'.....already exists"
+else
+    curl -O http://download.osgeo.org/libtiff/tiff-4.0.3.tar.gz
+fi
+if [ -e which-2.20.tar.gz ]; 
+    then echo "'which-2.20.tar.gz'.....already exists"
+else
+    curl -O http://www.xs4all.nl/~carlo17/which/which-2.20.tar.gz
+fi
+if [ -e XML-Parser-2.41.tar.gz ]; 
+    then echo "'XML-Parser-2.41.tar.gz'.....already exists"
+else
+    curl -O search.cpan.org/~toddr/XML-Parser-2.41/XML-Parser-2.41.tar.gz
+fi

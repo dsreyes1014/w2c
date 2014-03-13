@@ -147,7 +147,7 @@ void create_dir(void)
 	
 	user_variable = "USER";
 	home_dir = "home";
-	program_dir = "W2C";
+	program_dir = ".w2c";
 	
 	// Checks environment's user variable. 
 	sprintf(user, "%s", getenv(user_variable));
