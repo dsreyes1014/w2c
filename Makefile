@@ -73,7 +73,7 @@ install: $(PROG_DIR)
 	cp -v $(UNINSTALL) /opt/
 	cp -v $(DESKTOP_FILE) /usr/share/applications/
 	cp -Rv themes/Zukitwo $(PROG_DIR)/share/themes/
-	mkdir -v /usr/share/w2c
+	mkdir -pv /usr/share/w2c
 	cp -Rv icons /usr/share/w2c/icons
 	echo "export PATH=/opt/Write2chordpro/bin:${PATH}" > w2c.sh
 	mv -v w2c.sh /etc/profile.d/
