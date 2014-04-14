@@ -253,7 +253,7 @@ void song_select(GtkTreeSelection *tree_selection, gpointer data)
 		gtk_tree_model_get(GTK_TREE_MODEL(list_store), &iter, 0, 
 					       &get_song, -1);	
 					       
-		sprintf(song, "%s.chordpro", get_song);
+		sprintf(song, "%s.txt", get_song);
 		sprintf(song_path, "%s%s", directory, song);		
 		
 		g_free(get_song);			                                               
@@ -287,7 +287,7 @@ void list_files(void)
 		
 		length = strlen(files);
 		
-		files[length - 9] = '\0';
+		files[length - 4] = '\0';
 		
 		if(length >= 3)
 		{						

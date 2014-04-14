@@ -202,7 +202,7 @@ void save(GtkWidget *widget, gpointer data)
 	body = gtk_text_buffer_get_text(GTK_TEXT_BUFFER(t_buffer_editor), 
 	                                &start, &end, TRUE);
 	
-	sprintf(new_file, "%s%s.chordpro", directory, get_title);
+	sprintf(new_file, "%s%s.txt", directory, get_title);
 	
 	fp = fopen(new_file, "w+");
 		
@@ -220,7 +220,7 @@ void save(GtkWidget *widget, gpointer data)
 	
 	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(button_5), FALSE);
 	
-	sprintf(value, "%s.chordpro", get_title);	
+	sprintf(value, "%s.txt", get_title);	
 	
 	append_to_list(value);	
 }
