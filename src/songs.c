@@ -314,7 +314,7 @@ void song_list(void)
 	g_object_unref(list_store);	
 				
 	cell = gtk_cell_renderer_text_new();	
-	column = gtk_tree_view_column_new_with_attributes("Songs", cell, "text", NULL);
+	column = gtk_tree_view_column_new_with_attributes("Songs", cell, "text", 0, NULL);
 	selection = gtk_tree_view_get_selection(GTK_TREE_VIEW(tree_view));
 	model = gtk_tree_view_get_model(GTK_TREE_VIEW(tree_view));	
 	

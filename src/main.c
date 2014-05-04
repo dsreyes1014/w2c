@@ -29,7 +29,7 @@ extern GtkWidget *menu_bar,
 extern GtkTextBuffer *t_buffer_editor;     
 
 /******* 'tab_drag_drop' Function *********************************************/
-gboolean 
+void 
 tab_drag_drop(GtkWidget *widget, 
               GdkDragContext *context,
               gint x,
@@ -40,7 +40,8 @@ tab_drag_drop(GtkWidget *widget,
 	
 }                   
 /******* 'tab_drag_begin' Function *********************************************/
-void tab_drag_begin(GtkWidget *widget, GdkDragContext *context, gpointer data)
+void 
+tab_drag_begin(GtkWidget *widget, GdkDragContext *context, gpointer data)
 {
 	GtkWidget *box,
 	          *window,
